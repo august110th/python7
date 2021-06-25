@@ -22,45 +22,45 @@ def people(numbers):
     else:
         print("Введен несуществующий номер документа.")
 
-def shelf(numbers):
-    break_marker = False
-    for shelf_directories in directories.items():
-        for document_number in shelf_directories[1]:
-            if document_number == numbers:
-                print("Данный документ лежит на полке", shelf_directories[0])
-                break_marker = True
-                break
-        if break_marker == True:
-          break
-    else:
-        print("Введен несуществующий номер документа.")
-
-def people_list():
-    for people in documents:
-        print(people["type"], '"' + people["number"] + '"', '"' + people["name"] + '"')
-
-def add_command(params_type, number, name, directories_number):
-    if int(directories_number) == 1 or int(directories_number) == 2 or int(directories_number) == 3:
-        documents.append({"type": params_type, "number": number, "name": name})
-        directories[directories_number].append(number)
-    else:
-        print("Введенной полки не существует")
-
-while True:
-    command = input("Введите одну из команд: p, s, l, a: \n  ")
-    if command == "p":
-        people(input("Введите номер документа:"))
-    elif command == "s":
-        shelf(input("Введите номер документа:"))
-    elif command == "l":
-        people_list()
-    elif command == "a":
-        add_command(input("Введите тип документа:"), input("Введите номер документа:"), input("Введите имя:"),
-                    input("Введите номер полки (1, 2, 3):"))
-        print(documents)
-        print(directories)
-    else:
-        print("Вы ввели некорректную команду, повторите ввод.")
+# def shelf(numbers):
+#     break_marker = False
+#     for shelf_directories in directories.items():
+#         for document_number in shelf_directories[1]:
+#             if document_number == numbers:
+#                 print("Данный документ лежит на полке", shelf_directories[0])
+#                 break_marker = True
+#                 break
+#         if break_marker == True:
+#           break
+#     else:
+#         print("Введен несуществующий номер документа.")
+#
+# def people_list():
+#     for people in documents:
+#         print(people["type"], '"' + people["number"] + '"', '"' + people["name"] + '"')
+#
+# def add_command(params_type, number, name, directories_number):
+#     if int(directories_number) == 1 or int(directories_number) == 2 or int(directories_number) == 3:
+#         documents.append({"type": params_type, "number": number, "name": name})
+#         directories[directories_number].append(number)
+#     else:
+#         print("Введенной полки не существует")
+#
+# while True:
+#     command = input("Введите одну из команд: p, s, l, a: \n  ")
+#     if command == "p":
+#         people(input("Введите номер документа:"))
+#     elif command == "s":
+#         shelf(input("Введите номер документа:"))
+#     elif command == "l":
+#         people_list()
+#     elif command == "a":
+#         add_command(input("Введите тип документа:"), input("Введите номер документа:"), input("Введите имя:"),
+#                     input("Введите номер полки (1, 2, 3):"))
+#         print(documents)
+#         print(directories)
+#     else:
+#         print("Вы ввели некорректную команду, повторите ввод.")
 
 # class Test_buhgalter:
 #     def setup(self):
