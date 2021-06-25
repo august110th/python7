@@ -17,7 +17,7 @@ directories = {
 def people(numbers):
     for document_number in documents:
         if document_number["number"] == numbers:
-            print(document_number["name"])
+            return (document_number["name"])
             break
     else:
         print("Введен несуществующий номер документа.")
@@ -62,6 +62,11 @@ while True:
     else:
         print("Вы ввели некорректную команду, повторите ввод.")
 
-class Test_buhgalter:
-    def test_people(self):
-        assert people(10006) ==
+# class Test_buhgalter:
+#     def setup(self):
+#       print(1)
+#     def teardown(self):
+#         print(2)
+#
+#     def test_people(self):
+#         assert people(10006) == "Аристарх Павлов"
