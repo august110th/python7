@@ -18,26 +18,26 @@ def people(numbers):
     for document_number in documents:
         if document_number["number"] == numbers:
             return (document_number["name"])
-            break
+            #break
     else:
         print("Введен несуществующий номер документа.")
 
-# def shelf(numbers):
-#     break_marker = False
-#     for shelf_directories in directories.items():
-#         for document_number in shelf_directories[1]:
-#             if document_number == numbers:
-#                 print("Данный документ лежит на полке", shelf_directories[0])
-#                 break_marker = True
-#                 break
-#         if break_marker == True:
-#           break
-#     else:
-#         print("Введен несуществующий номер документа.")
-#
-# def people_list():
-#     for people in documents:
-#         print(people["type"], '"' + people["number"] + '"', '"' + people["name"] + '"')
+def shelf(numbers):
+    break_marker = False
+    for shelf_directories in directories.items():
+        for document_number in shelf_directories[1]:
+            if document_number == numbers:
+                return shelf_directories[0]
+                #break_marker = True
+                #break
+        if break_marker == True:
+          break
+    else:
+        print("Введен несуществующий номер документа.")
+
+def people_list():
+    for people in documents:
+        print(people["type"], '"' + people["number"] + '"', '"' + people["name"] + '"')
 #
 # def add_command(params_type, number, name, directories_number):
 #     if int(directories_number) == 1 or int(directories_number) == 2 or int(directories_number) == 3:
@@ -61,12 +61,3 @@ def people(numbers):
 #         print(directories)
 #     else:
 #         print("Вы ввели некорректную команду, повторите ввод.")
-
-# class Test_buhgalter:
-#     def setup(self):
-#       print(1)
-#     def teardown(self):
-#         print(2)
-#
-#     def test_people(self):
-#         assert people(10006) == "Аристарх Павлов"
