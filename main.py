@@ -44,20 +44,20 @@ def add_command(params_type, number, name, directories_number):
         documents.append({"type": params_type, "number": number, "name": name})
         directories[directories_number].append(number)
     else:
-        print("Введенной полки не существует")
+        return "Введенной полки не существует"
 
-while True:
-    command = input("Введите одну из команд: p, s, l, a: \n  ")
-    if command == "p":
-        people(input("Введите номер документа:"))
-    elif command == "s":
-        shelf(input("Введите номер документа:"))
-    elif command == "l":
-        people_list()
-    elif command == "a":
-        add_command(input("Введите тип документа:"), input("Введите номер документа:"), input("Введите имя:"),
-                    input("Введите номер полки (1, 2, 3):"))
-        print(documents)
-        print(directories)
-    else:
-        print("Вы ввели некорректную команду, повторите ввод.")
+# while True:
+#     command = input("Введите одну из команд: p, s, l, a: \n  ")
+#     if command == "p":
+#         people(input("Введите номер документа:"))
+#     elif command == "s":
+#         shelf(input("Введите номер документа:"))
+#     elif command == "l":
+#         people_list()
+#     elif command == "a":
+#         add_command(input("Введите тип документа:"), input("Введите номер документа:"), input("Введите имя:"),
+#                     input("Введите номер полки (1, 2, 3):"))
+#         print(documents)
+#         print(directories)
+#     else:
+#         print("Вы ввели некорректную команду, повторите ввод.")
