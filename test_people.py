@@ -9,4 +9,4 @@ class Test_buhgalter:
     def test_shelf(self):
         assert shelf('11-2') == '1'
     def test_add_command(self):
-        assert add_command()
+        assert add_command("zagran_passport", "1548 356426", "Василий Тупкин", '3') ==
